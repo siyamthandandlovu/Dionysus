@@ -1,0 +1,83 @@
+
+<!-- update model-->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Edit wine details</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <form id="addWineForm">
+          <h5 class="modal-title" id="exampleModalLongTitle">Update Wine details</h5>
+          <label id="UniqueModalID "for="name">Wine Name:</label>
+
+          <div class="form-group">
+            <label for="name">Wine Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter wine name" >
+          </div>
+
+          <div class="form-group">
+            <label for="description">Wine Description:</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter description">
+          </div>
+
+          <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="date" class="form-control" id="year">
+          </div>
+
+          <div class="form-group">
+            <label for="region">Region:</label>
+            <input type="text" class="form-control" id="region" placeholder="Enter region">
+          </div>
+
+          <div class="form-group">
+            <label for="food_pairing">Food pairing:</label>
+            <input type="text" class="form-control" id="food_pairing" placeholder="Enter food pairings">
+          </div>
+
+          <div class="form-group">
+            <label for="image">Image Link:</label>
+            <input type="text" class="form-control" id="image" placeholder="Enter wine image">
+          </div>
+
+          <div class="form-group">
+            <label for="sub-type">Sub-type:</label>
+            <input type="text" class="form-control" id="sub-type"
+              placeholder="Enter wine's sub-type eg. Pinot Noir, Babera, Syrah">
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" placeholder="Enter price">
+          </div>
+
+          <div class="form-group">
+            <label for="quality">Quality (1 - 10):</label>
+            <input type="range" class="form-control-range" id="quality" min="1" max="10">
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select class="form-control" id="category">
+              <option value="red">red</option>
+              <option value="sparkling">sparkling</option>
+              <option value="white">white</option>
+            </select>
+          </div>
+          <!--  <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
