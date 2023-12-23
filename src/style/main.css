@@ -43,11 +43,6 @@ body {
     text-align: right;
 }
 
-/*     img {
-    height: 200px;
-    width: 200px;
-  } */
-
 .image-container {
     display: flex;
 }
