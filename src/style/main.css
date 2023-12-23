@@ -1,72 +1,74 @@
+/*BUTTONS*/
+.btn {
+    background-color: #722F37;
+}
 
 .btn-homepage {
-    /* background-color: #701212; */
-    background-color: #722F37;
     width: 100%;
-  }
+}
 
-  .img-fluid {
-/*     height: 200px;
+.img-fluid {
+    /*     height: 200px;
     width: 400px; */
     border: 7px double black;
-  }
+}
 
-  .select {
+.select {
     background-color: rgba(255, 255, 255, 0.484);
-  }
+}
 
 
-  .mydiv {
+.mydiv {
     padding-right: 20px;
     padding-left: 20px;
 
     padding-bottom: 20px;
-    padding-top:20px;
-    
+    padding-top: 20px;
+
     margin-top: 100px;
     margin-left: 50px;
-    
-  } 
 
-  h1 {
+}
+
+h1 {
     text-align: center;
     font-family: 'GeoSansLight', 'Times New Roman', Times, serif
-  }
+}
 
-  body {
+body {
     font-family: 'GeoSansLight', 'Times New Roman', Times, serif
-  }
+}
 
-  #position {
+#position {
     text-align: right;
-  }
+}
 
-  /*     img {
+/*     img {
     height: 200px;
     width: 200px;
   } */
 
-  .image-container {
+.image-container {
     display: flex;
-  }
+}
 
-  .image {
+.image {
     margin-right: 10px;
     /* Adjust this value to add spacing between images */
     height: 200px;
     width: 200px;
-  }
+}
 
 
-  p {
+p {
     color: rgb(255, 255, 255);
-  }
+}
 
-  .mainSection {
+.mainSection {
     display: flex;
-  }
+}
 
-  .navbar {
+.navbar {
     background-color: #722F37;
     color: white;
     margin: 25px;
@@ -74,19 +76,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .navbar a {
+.navbar a {
     color: white;
     text-decoration: none;
     margin-left: 10px;
-  }
+}
 
-  .wineries-heading {
+.wineries-heading {
     margin: 25px;
-  }
+}
 
-  .footer {
+.footer {
     /* position: fixed; */
     left: 0;
     bottom: 0;
@@ -102,12 +104,12 @@
     /* display: flex; */
     /* justify-content: center; */
     align-items: center;
-  }
+}
 
 
-  /* Social Media */
+/* Social Media */
 
-  .bi {
+.bi {
     padding: 20px;
     font-size: 30px;
     width: 50px;
@@ -115,20 +117,20 @@
     text-decoration: none;
     margin: 5px 2px;
     color: white;
-  }
+}
 
-  .bi:hover {
+.bi:hover {
     opacity: 0.7;
-  }
+}
 
 
 
-  body {
+body {
     margin: 0;
     padding: 0;
-  }
+}
 
-  .background-image {
+.background-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -142,18 +144,18 @@
     background-size: cover;
     background-position: top;
     z-index: -1;
-  }
+}
 
-  .content {
+.content {
     padding-top: 100vh;
     /* Adjust this value as per your image height */
     background-color: white;
-  }
+}
 
 
-  /*Search bar information*/
+/*Search bar information*/
 
-  .topnav a {
+.topnav a {
     float: left;
     display: block;
     color: black;
@@ -161,23 +163,23 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
 
-  .topnav a:hover {
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
 
-  .topnav input[type=text] {
+.topnav input[type=text] {
     float: right;
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
     border: none;
     font-size: 17px;
-  }
+}
 
 
-  h2 {
+h2 {
     color: bisque
-  }
+}
