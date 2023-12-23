@@ -1,3 +1,11 @@
+/*BODY*/
+
+body {
+    font-family: 'GeoSansLight', 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
 /*BUTTONS*/
 .btn {
     background-color: #722F37;
@@ -35,9 +43,7 @@ h1 {
     font-family: 'GeoSansLight', 'Times New Roman', Times, serif
 }
 
-body {
-    font-family: 'GeoSansLight', 'Times New Roman', Times, serif
-}
+
 
 #position {
     text-align: right;
@@ -120,10 +126,6 @@ p {
 
 
 
-body {
-    margin: 0;
-    padding: 0;
-}
 
 .background-image {
     position: fixed;
