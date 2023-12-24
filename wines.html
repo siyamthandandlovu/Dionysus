@@ -224,7 +224,7 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <button id="sortButton" class="btn btn-primary" type="button">Sort Data</button>
+            <button id="sortButton" class="btn btn-dark" type="button">Sort Data</button>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
       <!--                                     DEFINE THE REVIEW MODAL                                         .-->
       <!--........................................................................................................-->
 
-      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal" id="open-modal-button">
+      <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal" id="open-modal-button">
   Leave a Review
 </button> -->
 
@@ -277,7 +277,7 @@
                   <label for="review">Review</label>
                   <textarea class="form-control" id="reviewTextArea" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" id="btnSubmitReview">Submit</button>
+                <button type="submit" class="btn btn-dark" id="btnSubmitReview">Submit</button>
               </form>
             </div>
           </div>
@@ -292,7 +292,7 @@
       <!--                                   ALL REVIEWS MODAL                                         .-->
       <!--........................................................................................................-->
       <!-- Button to trigger the modal -->
-      <!-- <button class="btn btn-primary all-review-button" data-toggle="modal" data-target="#allReviewsModalFinal" name="wineID1">Open Reviews</button>
+      <!-- <button class="btn btn-dark all-review-button" data-toggle="modal" data-target="#allReviewsModalFinal" name="wineID1">Open Reviews</button>
  -->
       <!-- Modal -->
       <div class="modal fade" id="allReviewsModalFinal" tabindex="-1" role="dialog"
@@ -365,7 +365,7 @@
           <label for="pairingRadio">Pairing</label><br>
           <br>
 
-          <button id="searchButton" class="btn btn-primary">Search</button>
+          <button id="searchButton" class="btn btn-dark">Search</button>
 
         </div><!-- END  : rowSearchObjects-->
       </div><!--class="col colSearchObjects"END  : rowSearchObjects-->
@@ -801,14 +801,14 @@
 
 
         const reviewButton = document.createElement('button');
-        reviewButton.classList.add('btn', 'btn-primary', 'review-button');
+        reviewButton.classList.add('btn', 'btn-dark', 'review-button');
         reviewButton.setAttribute('type', 'button');
         reviewButton.setAttribute('data-toggle', 'modal');
         reviewButton.setAttribute('data-target', '#reviewModal');
         reviewButton.setAttribute('name', wine.Wine_ID);
         console.log("reviewButton Button Name : ", reviewButton.name);
-        //type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal"
-        // type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal"
+        //type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
+        // type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
         reviewButton.innerText = 'Review';
 
         wineDiv.appendChild(reviewButton);
@@ -817,16 +817,16 @@
 
 
         const showAllReviewsButton = document.createElement('button');
-        // showAllReviewsButton.classList.add('btn', 'btn-primary', 'review-button');
-        showAllReviewsButton.classList.add('btn', 'btn-primary', 'all-review-button');
+        // showAllReviewsButton.classList.add('btn', 'btn-dark', 'review-button');
+        showAllReviewsButton.classList.add('btn', 'btn-dark', 'all-review-button');
         showAllReviewsButton.setAttribute('type', 'button');
         showAllReviewsButton.setAttribute('data-toggle', 'modal');
         showAllReviewsButton.setAttribute('data-target', '#allReviewsModalFinal');
         showAllReviewsButton.setAttribute('name', wine.Wine_ID);
         console.log("showAllReviews Button Name : ", showAllReviewsButton.name);
         // showAllReviewsButton.setAttribute('name', wine.Wine_ID);
-        //type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal"
-        // type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal"
+        //type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
+        // type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
         showAllReviewsButton.innerText = 'All Reviews';
 
         wineDiv.appendChild(showAllReviewsButton);
@@ -1063,7 +1063,7 @@
     //do NOT remove
 
     // Event delegation to handle click event on dynamically created button
-    //  reviewButton.classList.add('btn', 'btn-primary', 'review-button');
+    //  reviewButton.classList.add('btn', 'btn-dark', 'review-button');
     /*  document.addEventListener("click", function(event) {
         if (event.target.matches("#wineDiv button")) {//finds buttons in a div with ID wineDiv
           // Handle button click event here
