@@ -235,25 +235,28 @@
         var wineryDiv = document.createElement('div');
         wineryDiv.className = 'winery';
 
-        var nameElement = document.createElement('p');
-        nameElement.className = 'winery-name';
+        var nameElement = document.createElement('h3');
+        nameElement.className = 'winery-name text-dark';
         nameElement.textContent = winery.Name;
         wineryDiv.appendChild(nameElement);
 
         var imageElement = document.createElement('img');
-        imageElement.className = 'winery-image';
+        imageElement.className = 'winery-image  img-fluid col-lg-8';
         imageElement.src = winery.Image;
         wineryDiv.appendChild(imageElement);
 
         var addressElement = document.createElement('p');
+        addressElement.className = 'text-dark';
         addressElement.textContent = 'Address: ' + winery.Address;
         wineryDiv.appendChild(addressElement);
 
         var cityElement = document.createElement('p');
+        cityElement.className = 'text-dark';
         cityElement.textContent = 'City: ' + winery.City;
         wineryDiv.appendChild(cityElement);
 
         var provinceElement = document.createElement('p');
+        provinceElement.className = 'text-dark';
         provinceElement.textContent = 'Province: ' + winery.Province;
         wineryDiv.appendChild(provinceElement);
 
