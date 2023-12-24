@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
   <meta charset="UTF-8">
@@ -65,234 +64,234 @@
 
 
 
-  
-<div class="row">
-    <div class="left-section col-md-6 ps-4">
+
+    <div class="row">
+      <div class="left-section col-md-6 ps-4">
 
 
-      <h2>Sort </h2>
-      <!--now comes the frop down menu with the values to the left-->
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 mb-3">
-            <h4>Sort By:</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortBy" id="nameRadio" value="Name" checked>
-              <label class="form-check-label" for="nameRadio">
-                Name
-              </label>
+        <h2>Sort </h2>
+        <!--now comes the frop down menu with the values to the left-->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 mb-3">
+              <h4>Sort By:</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortBy" id="nameRadio" value="Name" checked>
+                <label class="form-check-label" for="nameRadio">
+                  Name
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortBy" id="wineryRadio" value="Winery">
+                <label class="form-check-label" for="wineryRadio">
+                  Winery
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortBy" id="yearRadio" value="Year">
+                <label class="form-check-label" for="yearRadio">
+                  Year
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortBy" id="priceRadio" value="Price">
+                <label class="form-check-label" for="priceRadio">
+                  Price
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortBy" id="qualityRadio" value="Quality">
+                <label class="form-check-label" for="qualityRadio">
+                  Quality
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortBy" id="wineryRadio" value="Winery">
-              <label class="form-check-label" for="wineryRadio">
-                Winery
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortBy" id="yearRadio" value="Year">
-              <label class="form-check-label" for="yearRadio">
-                Year
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortBy" id="priceRadio" value="Price">
-              <label class="form-check-label" for="priceRadio">
-                Price
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortBy" id="qualityRadio" value="Quality">
-              <label class="form-check-label" for="qualityRadio">
-                Quality
-              </label>
+
+
+            <div class="col-sm-6 mb-3">
+              <h4>Sort Order:</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortOrder" id="ascendingRadio" value="asc" checked>
+                <label class="form-check-label" for="ascendingRadio">
+                  Ascending
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortOrder" id="descendingRadio" value="desc">
+                <label class="form-check-label" for="descendingRadio">
+                  Descending
+                </label>
+              </div>
             </div>
           </div>
-
-
-          <div class="col-sm-6 mb-3">
-            <h4>Sort Order:</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortOrder" id="ascendingRadio" value="asc" checked>
-              <label class="form-check-label" for="ascendingRadio">
-                Ascending
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="sortOrder" id="descendingRadio" value="desc">
-              <label class="form-check-label" for="descendingRadio">
-                Descending
-              </label>
+          <div class="">
+            <div class="col">
+              <button id="sortButton" class="btn btn-dark" type="button">Sort Data</button>
             </div>
           </div>
         </div>
-        <div class="">
-          <div class="col">
-            <button id="sortButton" class="btn btn-dark" type="button">Sort Data</button>
-          </div>
-        </div>
-      </div>
 
 
 
-      <!--........................................................................................................-->
-      <!--                                     DEFINE THE REVIEW MODAL                                         .-->
-      <!--........................................................................................................-->
+        <!--........................................................................................................-->
+        <!--                                     DEFINE THE REVIEW MODAL                                         .-->
+        <!--........................................................................................................-->
 
-      <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal" id="open-modal-button">
+        <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal" id="open-modal-button">
   Leave a Review
 </button> -->
 
-      <!-- Review Modal -->
-      <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="reviewModalLabel">Leave a Review</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <!--  <span aria-hidden="true">&times;</span> -->
-                <span aria-hidden="true">x</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="reviewForm">
-                <div class="form-group">
-                  <label for="Wine_ID" id="labelWineID">Wine ID</label> <br>
+        <!-- Review Modal -->
+        <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalLabel">Leave a Review</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <!--  <span aria-hidden="true">&times;</span> -->
+                  <span aria-hidden="true">x</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="reviewForm">
+                  <div class="form-group">
+                    <label for="Wine_ID" id="labelWineID">Wine ID</label> <br>
 
-                  <label for="email">Email</label>
+                    <label for="email">Email</label>
 
-                  <input type="text" class="form-control" id="reviewEmail" required>
-                </div>
+                    <input type="text" class="form-control" id="reviewEmail" required>
+                  </div>
 
-                <div class="form-group">
-                  <label for="rating">Rating</label>
-                  <select class="form-control" id="ratingReview" required>
-                    <option value="">Select a rating</option>
-                    <option value="5">5 Stars</option>
-                    <option value="4">4 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="2">2 Stars</option>
-                    <option value="1">1 Star</option>
-                  </select>
-                </div>
+                  <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select class="form-control" id="ratingReview" required>
+                      <option value="">Select a rating</option>
+                      <option value="5">5 Stars</option>
+                      <option value="4">4 Stars</option>
+                      <option value="3">3 Stars</option>
+                      <option value="2">2 Stars</option>
+                      <option value="1">1 Star</option>
+                    </select>
+                  </div>
 
-                <div class="form-group">
-                  <label for="review">Review</label>
-                  <textarea class="form-control" id="reviewTextArea" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark" id="btnSubmitReview">Submit</button>
-              </form>
+                  <div class="form-group">
+                    <label for="review">Review</label>
+                    <textarea class="form-control" id="reviewTextArea" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-dark" id="btnSubmitReview">Submit</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!--........................................................................................................-->
-      <!--                                   END OF DEFINNG REVIEW MODAL                                         .-->
-      <!--........................................................................................................-->
+        <!--........................................................................................................-->
+        <!--                                   END OF DEFINNG REVIEW MODAL                                         .-->
+        <!--........................................................................................................-->
 
-      <!--........................................................................................................-->
-      <!--                                   ALL REVIEWS MODAL                                         .-->
-      <!--........................................................................................................-->
-      <!-- Button to trigger the modal -->
-      <!-- <button class="btn btn-dark all-review-button" data-toggle="modal" data-target="#allReviewsModalFinal" name="wineID1">Open Reviews</button>
+        <!--........................................................................................................-->
+        <!--                                   ALL REVIEWS MODAL                                         .-->
+        <!--........................................................................................................-->
+        <!-- Button to trigger the modal -->
+        <!-- <button class="btn btn-dark all-review-button" data-toggle="modal" data-target="#allReviewsModalFinal" name="wineID1">Open Reviews</button>
  -->
-      <!-- Modal -->
-      <div class="modal fade" id="allReviewsModalFinal" tabindex="-1" role="dialog"
-        aria-labelledby="allReviewsModalFinalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="allReviewsModalFinalLabel">All Reviews for Wine</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">x</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <!-- Review content will be dynamically inserted here -->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- Modal -->
+        <div class="modal fade" id="allReviewsModalFinal" tabindex="-1" role="dialog"
+          aria-labelledby="allReviewsModalFinalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="allReviewsModalFinalLabel">All Reviews for Wine</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">x</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Review content will be dynamically inserted here -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 
 
-      <!--........................................................................................................-->
-      <!--                                   END OF  ALL REVIEWS MODAL                                         .-->
-      <!--........................................................................................................-->
+        <!--........................................................................................................-->
+        <!--                                   END OF  ALL REVIEWS MODAL                                         .-->
+        <!--........................................................................................................-->
 
 
-      <!-- SEARCHING-->
-      <br><br>
-      <h2>Search </h2>
-      <div class="row mt-3 rowSearchObjects">
-        <div class="col colSearchObjects">
-          <!--  <label for="searchText">Search:</label> -->
-          <input type="text" id="searchText" placeholder="Search In">
-          <h4>Search In: </h4>
-          <br>
+        <!-- SEARCHING-->
+        <br><br>
+        <h2>Search </h2>
+        <div class="row mt-3 rowSearchObjects">
+          <div class="col colSearchObjects">
+            <!--  <label for="searchText">Search:</label> -->
+            <input type="text" id="searchText" placeholder="Search In">
+            <h4>Search In: </h4>
+            <br>
 
-          <label for="attribute">Search In:</label><br>
-
-
-          <input type="radio" id="nameRadio" name="attribute" value="Name">
-          <label for="nameRadio">Name</label><br>
+            <label for="attribute">Search In:</label><br>
 
 
-          <input type="radio" id="wineryRadio" name="attribute" value="Winery">
-          <label for="wineryRadio">Winery</label><br>
+            <input type="radio" id="nameRadio" name="attribute" value="Name">
+            <label for="nameRadio">Name</label><br>
 
 
-          <input type="radio" id="descriptionRadio" name="attribute" value="Description">
-          <label for="descriptionRadio">Description</label><br>
+            <input type="radio" id="wineryRadio" name="attribute" value="Winery">
+            <label for="wineryRadio">Winery</label><br>
 
 
-          <input type="radio" id="regionRadio" name="attribute" value="Region">
-          <label for="regionRadio">Region</label><br>
+            <input type="radio" id="descriptionRadio" name="attribute" value="Description">
+            <label for="descriptionRadio">Description</label><br>
 
 
-          <input type="radio" id="subtypeRadio" name="attribute" value="Subtype">
-          <label for="subtypeRadio">Subtype</label><br>
+            <input type="radio" id="regionRadio" name="attribute" value="Region">
+            <label for="regionRadio">Region</label><br>
 
 
-          <input type="radio" id="categoryRadio" name="attribute" value="Category">
-          <label for="categoryRadio">Category</label><br>
+            <input type="radio" id="subtypeRadio" name="attribute" value="Subtype">
+            <label for="subtypeRadio">Subtype</label><br>
+
+
+            <input type="radio" id="categoryRadio" name="attribute" value="Category">
+            <label for="categoryRadio">Category</label><br>
 
 
 
-          <input type="radio" id="pairingRadio" name="attribute" value="Pairing">
-          <label for="pairingRadio">Pairing</label><br>
-          <br>
+            <input type="radio" id="pairingRadio" name="attribute" value="Pairing">
+            <label for="pairingRadio">Pairing</label><br>
+            <br>
 
-          <button id="searchButton" class="btn btn-dark mb-5">Search</button>
+            <button id="searchButton" class="btn btn-dark mb-5">Search</button>
 
-        </div><!-- END  : rowSearchObjects-->
-      </div><!--class="col colSearchObjects"END  : rowSearchObjects-->
+          </div><!-- END  : rowSearchObjects-->
+        </div><!--class="col colSearchObjects"END  : rowSearchObjects-->
 
-    </div> <!--end of div LEFT section-->
-
-
-    <div class="right-section col-md-6 ps-4">
+      </div> <!--end of div LEFT section-->
 
 
-      <div id="wineDiv">
-
-      </div>
+      <div class="right-section col-md-6 ps-4">
 
 
-      <div class="image-container">
-      </div>
+        <div id="wineDiv">
+
+        </div>
 
 
-    </div><!-- end of right section div-->
-  
-</div>
+        <div class="image-container">
+        </div>
 
-  
+
+      </div><!-- end of right section div-->
+
+    </div>
+
+
   </div>
 
 
@@ -681,16 +680,16 @@
 
         const image = document.createElement('img');
         image.src = wine.Image;
-        image.style.width = '95%'; 
+        image.style.width = '95%';
         wineDiv.appendChild(image);
 
         const winery = document.createElement('p');
-        winery.classList='text-dark';
+        winery.classList = 'text-dark';
         winery.innerText = wine.Winery;
         wineDiv.appendChild(winery);
 
         const description = document.createElement('p');
-        description.classList='text-dark';
+        description.classList = 'text-dark';
         description.innerText = wine.Description;
         wineDiv.appendChild(description);
 
@@ -711,7 +710,7 @@
 
 
         const reviewButton = document.createElement('button');
-        reviewButton.classList.add('btn', 'btn-dark', 'review-button','me-2','mt-2');
+        reviewButton.classList.add('btn', 'btn-dark', 'review-button', 'me-2', 'mt-2');
         reviewButton.setAttribute('type', 'button');
         reviewButton.setAttribute('data-toggle', 'modal');
         reviewButton.setAttribute('data-target', '#reviewModal');
@@ -728,7 +727,7 @@
 
         const showAllReviewsButton = document.createElement('button');
         // showAllReviewsButton.classList.add('btn', 'btn-dark', 'review-button');
-        showAllReviewsButton.classList.add('btn', 'btn-dark', 'all-review-button','me-2','mt-2');
+        showAllReviewsButton.classList.add('btn', 'btn-dark', 'all-review-button', 'me-2', 'mt-2');
         showAllReviewsButton.setAttribute('type', 'button');
         showAllReviewsButton.setAttribute('data-toggle', 'modal');
         showAllReviewsButton.setAttribute('data-target', '#allReviewsModalFinal');
