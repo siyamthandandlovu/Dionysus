@@ -684,10 +684,12 @@
         wineDiv.appendChild(image);
 
         const winery = document.createElement('p');
+        winery.classList='text-dark';
         winery.innerText = wine.Winery;
         wineDiv.appendChild(winery);
 
         const description = document.createElement('p');
+        description.classList='text-dark';
         description.innerText = wine.Description;
         wineDiv.appendChild(description);
 
