@@ -2,114 +2,63 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dionysus Wineries</title>
-  <style>
-    /*  .wineries-heading {
-      margin: 25px;
-    }
-    .mainSection{
-        display: flex;
-    }
-    .left-section {
-      width: 25%;
-      float: left;
-      padding-left: 250px;
-    }
-    .right-section {
-      width: 75%;
-      float: right;
-      padding: 25px;
-      
-    }
-    .titleText {
-    text-align: center;
-  } */
-    .centered-div {
-      justify-content: space-between;
-      /*  position: absolute; */
-      /*  top: 50%; */
-      /*  left: 50%; */
-      /*  transform: translate(-50%, -50%); */
-    }
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 
-    /*     .footer {
-      background-color: #222222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .footer img {
-      height: 20px;
-      margin: 5px;
-    }
-    .footer p {
-      font-size: 12px;
-    } 
-  .footer img {
-    height: 20px;
-    margin: 5px;
-  }
-  .footer p {
-    font-size: 12px;
-  }
-    .item {
-    width: 55%;
-    /* float: left;
-    margin-bottom: 25px;
-  }
-  .item h3 {
-    margin-top: 0;
-  }
-  .item img {
-    width: 100%;
-    height: auto;
-  } */
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
-    /*stylling for dynamically added wine pages*/
-    /*   .winery {
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      padding: 10px;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
-    .winery-name {
-      font-weight: bold;
-    }
-
-    .winery-image {
-      max-width: 70%;
-      margin-top: 10px;
-    } */
-  </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="src/style/main.css">
 </head>
 
 <body>
-  <div class="mainBodyDiv">
-    <div class="navbar header">
-      <div>
-        <span>Dionysus</span>
-      </div>
-      <div>
-        <a href="home.html">Home</a>
-        <a href="wines.html">Wines</a>
-        <a href="#">Wineries</a>
-        <a href="Terms_&_privacy.html">About</a>
-      </div>
-    </div>
 
-    <div class="wineries-heading">
-      <h1 class="titleText">Wineries</h1>
-    </div>
-
-    <!-- <div class="mainSection centered-div">
-  <div class="left-section">
-    <h2>Province</h2>
     
-  </div> -->
+
+
+  <!--Collapsable Navigation bar-->
+
+  <nav class="navbar navbar-expand-sm bg-body-tertiary px-0 py-0 " data-bs-theme="dark">
+    <div class="container-fluid py-2" style="background-color: #722F37;">
+      <a class="navbar-brand" href="#">Dionysus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="wines.html">Wines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="wineries.html">Wineries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="owners.html">Management</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 
     <div class="left-section">
       <h2>Province</h2>
@@ -156,19 +105,19 @@
   </div>
 
 
-  <div class="divBottom">
-    <div class="footer">
-      <p>CONNECT WITH US</p>
-      <a href="#" class="bi bi-linkedin"></a>
-      <a href="#" class="bi bi-google"></a>
-      <a href="#" class="bi bi-facebook"></a>
-      <a href="#" class="bi bi-instagram"></a>
-      <a href="#" class="bi bi-twitter"></a>
-      <a href="#" class="bi bi-pinterest"></a>
-      <br>
-      <p>Dionysus @2023</p>
-    </div>
+  <div class="footer">
+    <p>CONNECT WITH US</p>
+    <a href="#" class="bi bi-linkedin"></a>
+    <a href="#" class="bi bi-google"></a>
+    <a href="#" class="bi bi-facebook"></a>
+    <a href="#" class="bi bi-instagram"></a>
+    <a href="#" class="bi bi-twitter"></a>
+    <a href="#" class="bi bi-pinterest"></a>
+    <br>
+    <p class="text-light text-md-center pt-2">Dionysus @2023</p>
+    <a href="#" class="text-light text-md-center">About</a>
   </div>
+
   <!--end of divBottom-->
   <script>
     //............................................................
