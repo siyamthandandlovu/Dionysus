@@ -3,18 +3,25 @@
 
 <head>
   <title>Dionysus Wine Catalogue Management</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<!--   <link rel="stylesheet" href="src/style/main.css">
+ -->
+ <link rel="stylesheet" href="../src/style/main.css">
   <style>
-    body {
-      font-family: "GeosansLight", sans-serif;
-    }
+/*     
 
-    .table-responsive-custom {
-      /*   table-layout: auto;*/
+/*     .table-responsive-custom {
+      /*   table-layout: auto;
       table-layout: auto;
     }
 
@@ -67,12 +74,8 @@
 
     .centered-div {
       justify-content: space-between;
-      /*  position: absolute; */
-      /*  top: 50%; */
-      /*  left: 50%; */
-      /*  transform: translate(-50%, -50%); */
     }
-
+ */
 
     /*     .footer {
       background-color: #222222;
@@ -87,7 +90,7 @@
     .footer p {
       font-size: 12px;
     } */
-    .footer {
+/*     .footer {
       position: fixed;
       left: 0;
       bottom: 0;
@@ -106,10 +109,10 @@
     .footer p {
       font-size: 12px;
     }
-
-    .item {
+ */
+   /*  .item {
       width: 55%;
-      /* float: left; */
+       float: left; 
       margin-bottom: 25px;
     }
 
@@ -120,12 +123,12 @@
     .item img {
       width: 100%;
       height: auto;
-    }
+    } */
 
 
 
     /*Wineries Colours*/
-    .custom-table {
+    /* .custom-table {
       background-color: #222222;
       color: white;
     }
@@ -138,7 +141,7 @@
     .custom-table td {
       background-color: white;
       color: #222222;
-    }
+    } */
 
     /* 
     .btn {
@@ -147,7 +150,7 @@
 } */
 
 
-    .btn {
+   /*  .btn {
       background-color: #222222;
       color: white;
       border-color: #722F37;
@@ -164,10 +167,10 @@
       color: white;
       border-color: #722F37;
     }
-
+ */
     /*styling the two buttons that add or UpdateDelete a wine*/
 
-    .btn-container {
+  /*   .btn-container {
       text-align: center;
       margin-top: 20px;
 
@@ -176,38 +179,58 @@
     .btn-container .btn {
       width: 30%;
       font-size: 24px;
-    }
+    } */
   </style>
 </head>
 
 <body>
 
-  <div class="navbar">
-    <div>
-      <span>
-        <h2>Dionysus</h2>
-      </span>
+
+  <!--Collapsable Navigation bar-->
+
+  <nav class="navbar navbar-expand-sm bg-body-tertiary px-0 py-0 " data-bs-theme="dark">
+    <div class="container-fluid py-2" style="background-color: #722F37;">
+      <a class="navbar-brand" href="#">Dionysus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="wines.html">Wines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="wineries.html">Wineries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="owners.html">Management</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>
+  </nav>
 
 
-      <a href="#">Log Out</a>
-    </div>
-  </div>
 
   <div class="wineries-heading">
-    <h1 class="titleText">Wine Catalogue Management</h1>
-  </div>
-
+    <h1 class="titleText text-center">Wine Catalogue Management</h1>
+  </div> <!--sir WHY does the whole title just DISSAPEAR when i make h1 a p instead????????? -->
   <!--   <button id="addWine">Add Wine</button>
 
   <button id="delteUpdateWine">Update or Delete Wines</button> -->
 
-
+<p class="text-center text-dark px-4">You can effortlessly manage every aspect of your wine inventory, ensuring that your collection is always up-to-date, well-organized, and easily accessible.</p>
   <!--Two buttons to select the whether to -->
-  <div class="btn-container">
-    <button class="btn btn-primary" data-toggle="modal" data-target="#addWineModal">Add a Wine</button>
-    <!--  <button class="btn btn-primary">Update or Delete Wine</button> -->
+  
+  <div class="">
+    <button class="btn btn-dark" data-toggle="modal" data-target="#addWineModal">Add a Wine</button>
   </div>
 
 
@@ -216,7 +239,7 @@
 
     <!-- START OF ADDING A WINE-->
     <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWineModal">
+    <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addWineModal">
     Add a Wine
   </button> -->
 
@@ -293,7 +316,7 @@
 
 
 
-                <!--  <button type="submit" class="btn btn-primary">Submit</button> -->
+                <!--  <button type="submit" class="btn btn-dark">Submit</button> -->
               </form>
             </div>
             <!-- THIS IS THE DATA VALUES TO BE BE FILLED IN-->
@@ -308,8 +331,8 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="saveChangesButton">Save Changes</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" id="saveChangesButton">Save Changes</button>
           </div>
         </div>
       </div>
@@ -342,7 +365,7 @@
 
       <!-- START OF UPDATING OR DELETING  A WINE-->
       <!-- Button trigger modal -->
-      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateWineModal" id="updateDeleteWine">
+      <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#updateWineModal" id="updateDeleteWine">
     Update or Delete Wines
   </button> -->
 
@@ -361,8 +384,8 @@
               ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary btnSaveChangesAdd">Save changes</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-dark btnSaveChangesAdd">Save changes</button>
             </div>
           </div>
         </div>
@@ -413,6 +436,7 @@
       <p class="text-light text-md-center pt-2">Dionysus @2023</p>
       <a href="#" class="text-light text-md-center">About</a>
     </div>
+  
 </body>
 
 
@@ -644,40 +668,40 @@
   //........................................................................................................
 
   window.onload = function () {//start of onload function *********************************************************************
-console.log(allWinesDummyData);
+    console.log(allWinesDummyData);
     tableName = "Wine";
     var tableValuesSecond;
     var countTableVals = 0;
     // const allWines = tableValuesSecond;
     var allWines;
 
-   /* getAllTable is a function from the ajax.js that obtains the entire wines table
-    getAllTable(tableName)
-      .then(AllTableValues => {
-        if (AllTableValues && AllTableValues.length > 0 && 'Wine_ID' in AllTableValues[0]) {
-          //meaning that we have fetched the data
+    /* getAllTable is a function from the ajax.js that obtains the entire wines table
+     getAllTable(tableName)
+       .then(AllTableValues => {
+         if (AllTableValues && AllTableValues.length > 0 && 'Wine_ID' in AllTableValues[0]) {
+           //meaning that we have fetched the data
+ 
+           tableValuesSecond = AllTableValues;
+           allWines = AllTableValues;
+           console.log("allWines has been assigned", allWines);
+           console.log("tableValuesSecond has been assigned", tableValuesSecond);
+           console.log(AllTableValues[0].Wine_ID);
+           console.log("AllTableValues[0]", AllTableValues[0])
+           console.log("AllTableValues", AllTableValues)
+           startAllLoading();
+ 
+           // Assign the fetched data to tableValuesSecond
+           // createTable(); // Call createTable function here to populate the table with fetched data
+         } else {
+           console.log('Data not in expected format');
+         }
+       })
+       .catch(error => {
+         console.error(error);
+       });
+ */
 
-          tableValuesSecond = AllTableValues;
-          allWines = AllTableValues;
-          console.log("allWines has been assigned", allWines);
-          console.log("tableValuesSecond has been assigned", tableValuesSecond);
-          console.log(AllTableValues[0].Wine_ID);
-          console.log("AllTableValues[0]", AllTableValues[0])
-          console.log("AllTableValues", AllTableValues)
-          startAllLoading();
-
-          // Assign the fetched data to tableValuesSecond
-          // createTable(); // Call createTable function here to populate the table with fetched data
-        } else {
-          console.log('Data not in expected format');
-        }
-      })
-      .catch(error => {
-        console.error(error);
-      });
-*/
-
-startAllLoading();
+    startAllLoading();
     //and assign tableValuesSecond to allWines
     allWines = allWinesDummyData;
 
@@ -785,220 +809,220 @@ startAllLoading();
 
       // Sample JSON data
       //..........................................................................................
-            tableValuesSecond = [
-            {
-      "Wine_ID": "1",
-      "Name": "Chardonnay",
-      "Winery": "Winery A",
-      "Description": "A classic white wine with rich flavors.",
-      "Year": 2019,
-      "Region": "California",
-      "Price": 25.99,
-      "Image": "https://images.pexels.com/photos/774455/pexels-photo-774455.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 9,
-      "Subtype": "Dry",
-      "Category": "White",
-      "Pairing": "Seafood"
-    },
-    {
-      "Wine_ID": "2",
-      "Name": "Cabernet Sauvignon",
-      "Winery": "Winery B",
-      "Description": "A bold red wine with intense flavors.",
-      "Year": 2016,
-      "Region": "Napa Valley",
-      "Price": 39.99,
-      "Image": "https://images.pexels.com/photos/15780335/pexels-photo-15780335/free-photo-of-wine-in-glass-in-woman-hand.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 8,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Steak"
-    },
-    {
-      "Wine_ID": "3",
-      "Name": "Riesling",
-      "Winery": "Winery C",
-      "Description": "A sweet white wine with fruity notes.",
-      "Year": 2020,
-      "Region": "Mosel",
-      "Price": 16.99,
-      "Image": "https://images.pexels.com/photos/15567450/pexels-photo-15567450/free-photo-of-mirror-baguette-wine-and-strawberries-picnic.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Sweet",
-      "Category": "White",
-      "Pairing": "Spicy cuisine"
-    },
-    {
-      "Wine_ID": "4",
-      "Name": "Pinot Noir",
-      "Winery": "Winery D",
-      "Description": "A delicate red wine with subtle flavors.",
-      "Year": 2018,
-      "Region": "Burgundy",
-      "Price": 29.99,
-      "Image": "https://images.pexels.com/photos/7282899/pexels-photo-7282899.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 8,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Salmon"
-    },
-    {
-      "Wine_ID": "5",
-      "Name": "Sauvignon Blanc",
-      "Winery": "Winery E",
-      "Description": "A refreshing white wine with citrus notes.",
-      "Year": 2021,
-      "Region": "Marlborough",
-      "Price": 18.99,
-      "Image": "https://images.pexels.com/photos/9397580/pexels-photo-9397580.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Dry",
-      "Category": "White",
-      "Pairing": "Goat cheese"
-    },
-    {
-      "Wine_ID": "6",
-      "Name": "Malbec",
-      "Winery": "Winery F",
-      "Description": "A robust red wine with dark fruit flavors.",
-      "Year": 2017,
-      "Region": "Mendoza",
-      "Price": 24.99,
-      "Image": "https://images.pexels.com/photos/12176250/pexels-photo-12176250.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 8,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Grilled meats"
-    },
-    {
-      "Wine_ID": "7",
-      "Name": "Gewürztraminer",
-      "Winery": "Winery G",
-      "Description": "A fragrant white wine with floral aromas.",
-      "Year": 2020,
-      "Region": "Alsace",
-      "Price": 21.99,
-      "Image": "https://images.pexels.com/photos/10045952/pexels-photo-10045952.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Off-dry",
-      "Category": "White",
-      "Pairing": "Asian cuisine"
-    },
-    {
-      "Wine_ID": "8",
-      "Name": "Merlot",
-      "Winery": "Winery H",
-      "Description": "A smooth red wine with velvety tannins.",
-      "Year": 2018,
-      "Region": "Bordeaux",
-      "Price": 27.99,
-      "Image": "https://images.pexels.com/photos/11736166/pexels-photo-11736166.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 8,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Lamb"
-    },
-    {
-      "Wine_ID": "9",
-      "Name": "Champagne",
-      "Winery": "Winery I",
-      "Description": "A sparkling wine with crisp acidity.",
-      "Year": 2015,
-      "Region": "Champagne",
-      "Price": 39.99,
-      "Image": "https://images.pexels.com/photos/9397571/pexels-photo-9397571.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 9,
-      "Subtype": "Dry",
-      "Category": "Sparkling",
-      "Pairing": "Oysters"
-    },
-    {
-      "Wine_ID": "10",
-      "Name": "Zinfandel",
-      "Winery": "Winery J",
-      "Description": "A bold and fruity red wine with hints of spice.",
-      "Year": 2017,
-      "Region": "California",
-      "Price": 23.99,
-      "Image": "https://images.pexels.com/photos/7670333/pexels-photo-7670333.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Barbecue"
-    },
-    {
-      "Wine_ID": "11",
-      "Name": "Viognier",
-      "Winery": "Winery K",
-      "Description": "An aromatic white wine with apricot and floral notes.",
-      "Year": 2019,
-      "Region": "Rhône Valley",
-      "Price": 20.99,
-      "Image": "https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Dry",
-      "Category": "White",
-      "Pairing": "Thai cuisine"
-    },
-    {
-      "Wine_ID": "12",
-      "Name": "Shiraz",
-      "Winery": "Winery L",
-      "Description": "A full-bodied red wine with dark fruit and peppery flavors.",
-      "Year": 2016,
-      "Region": "Barossa Valley",
-      "Price": 28.99,
-      "Image": "https://images.pexels.com/photos/16933511/pexels-photo-16933511/free-photo-of-bottle-of-wine-on-table.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 8,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Grilled steak"
-    },
-    {
-      "Wine_ID": "13",
-      "Name": "Chenin Blanc",
-      "Winery": "Winery M",
-      "Description": "A versatile white wine with notes of honey and stone fruit.",
-      "Year": 2020,
-      "Region": "Loire Valley",
-      "Price": 17.99,
-      "Image": "https://images.pexels.com/photos/16854496/pexels-photo-16854496/free-photo-of-woman-holding-glass-of-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Dry",
-      "Category": "White",
-      "Pairing": "Roast chicken"
-    },
-    {
-      "Wine_ID": "14",
-      "Name": "Barolo",
-      "Winery": "Winery N",
-      "Description": "A prestigious red wine with complex flavors and firm tannins.",
-      "Year": 2014,
-      "Region": "Piedmont",
-      "Price": 59.99,
-      "Image": "https://images.pexels.com/photos/15846879/pexels-photo-15846879/free-photo-of-grapes-and-a-glass-of-red-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 9,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Truffle dishes"
-    },
-    {
-      "Wine_ID": "15",
-      "Name": "Grenache",
-      "Winery": "Winery O",
-      "Description": "A medium-bodied red wine with red berry and spice notes.",
-      "Year": 2017,
-      "Region": "Rhone Valley",
-      "Price": 22.99,
-      "Image": "https://images.pexels.com/photos/15786533/pexels-photo-15786533/free-photo-of-wine-cellar-filled-with-bottles-of-red-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "Quality": 7,
-      "Subtype": "Dry",
-      "Category": "Red",
-      "Pairing": "Mediterranean cuisine"
-    }
-            // Add more objects as needed
-          ];
-       
+      tableValuesSecond = [
+        {
+          "Wine_ID": "1",
+          "Name": "Chardonnay",
+          "Winery": "Winery A",
+          "Description": "A classic white wine with rich flavors.",
+          "Year": 2019,
+          "Region": "California",
+          "Price": 25.99,
+          "Image": "https://images.pexels.com/photos/774455/pexels-photo-774455.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 9,
+          "Subtype": "Dry",
+          "Category": "White",
+          "Pairing": "Seafood"
+        },
+        {
+          "Wine_ID": "2",
+          "Name": "Cabernet Sauvignon",
+          "Winery": "Winery B",
+          "Description": "A bold red wine with intense flavors.",
+          "Year": 2016,
+          "Region": "Napa Valley",
+          "Price": 39.99,
+          "Image": "https://images.pexels.com/photos/15780335/pexels-photo-15780335/free-photo-of-wine-in-glass-in-woman-hand.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 8,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Steak"
+        },
+        {
+          "Wine_ID": "3",
+          "Name": "Riesling",
+          "Winery": "Winery C",
+          "Description": "A sweet white wine with fruity notes.",
+          "Year": 2020,
+          "Region": "Mosel",
+          "Price": 16.99,
+          "Image": "https://images.pexels.com/photos/15567450/pexels-photo-15567450/free-photo-of-mirror-baguette-wine-and-strawberries-picnic.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Sweet",
+          "Category": "White",
+          "Pairing": "Spicy cuisine"
+        },
+        {
+          "Wine_ID": "4",
+          "Name": "Pinot Noir",
+          "Winery": "Winery D",
+          "Description": "A delicate red wine with subtle flavors.",
+          "Year": 2018,
+          "Region": "Burgundy",
+          "Price": 29.99,
+          "Image": "https://images.pexels.com/photos/7282899/pexels-photo-7282899.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 8,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Salmon"
+        },
+        {
+          "Wine_ID": "5",
+          "Name": "Sauvignon Blanc",
+          "Winery": "Winery E",
+          "Description": "A refreshing white wine with citrus notes.",
+          "Year": 2021,
+          "Region": "Marlborough",
+          "Price": 18.99,
+          "Image": "https://images.pexels.com/photos/9397580/pexels-photo-9397580.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Dry",
+          "Category": "White",
+          "Pairing": "Goat cheese"
+        },
+        {
+          "Wine_ID": "6",
+          "Name": "Malbec",
+          "Winery": "Winery F",
+          "Description": "A robust red wine with dark fruit flavors.",
+          "Year": 2017,
+          "Region": "Mendoza",
+          "Price": 24.99,
+          "Image": "https://images.pexels.com/photos/12176250/pexels-photo-12176250.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 8,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Grilled meats"
+        },
+        {
+          "Wine_ID": "7",
+          "Name": "Gewürztraminer",
+          "Winery": "Winery G",
+          "Description": "A fragrant white wine with floral aromas.",
+          "Year": 2020,
+          "Region": "Alsace",
+          "Price": 21.99,
+          "Image": "https://images.pexels.com/photos/10045952/pexels-photo-10045952.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Off-dry",
+          "Category": "White",
+          "Pairing": "Asian cuisine"
+        },
+        {
+          "Wine_ID": "8",
+          "Name": "Merlot",
+          "Winery": "Winery H",
+          "Description": "A smooth red wine with velvety tannins.",
+          "Year": 2018,
+          "Region": "Bordeaux",
+          "Price": 27.99,
+          "Image": "https://images.pexels.com/photos/11736166/pexels-photo-11736166.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 8,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Lamb"
+        },
+        {
+          "Wine_ID": "9",
+          "Name": "Champagne",
+          "Winery": "Winery I",
+          "Description": "A sparkling wine with crisp acidity.",
+          "Year": 2015,
+          "Region": "Champagne",
+          "Price": 39.99,
+          "Image": "https://images.pexels.com/photos/9397571/pexels-photo-9397571.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 9,
+          "Subtype": "Dry",
+          "Category": "Sparkling",
+          "Pairing": "Oysters"
+        },
+        {
+          "Wine_ID": "10",
+          "Name": "Zinfandel",
+          "Winery": "Winery J",
+          "Description": "A bold and fruity red wine with hints of spice.",
+          "Year": 2017,
+          "Region": "California",
+          "Price": 23.99,
+          "Image": "https://images.pexels.com/photos/7670333/pexels-photo-7670333.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Barbecue"
+        },
+        {
+          "Wine_ID": "11",
+          "Name": "Viognier",
+          "Winery": "Winery K",
+          "Description": "An aromatic white wine with apricot and floral notes.",
+          "Year": 2019,
+          "Region": "Rhône Valley",
+          "Price": 20.99,
+          "Image": "https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Dry",
+          "Category": "White",
+          "Pairing": "Thai cuisine"
+        },
+        {
+          "Wine_ID": "12",
+          "Name": "Shiraz",
+          "Winery": "Winery L",
+          "Description": "A full-bodied red wine with dark fruit and peppery flavors.",
+          "Year": 2016,
+          "Region": "Barossa Valley",
+          "Price": 28.99,
+          "Image": "https://images.pexels.com/photos/16933511/pexels-photo-16933511/free-photo-of-bottle-of-wine-on-table.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 8,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Grilled steak"
+        },
+        {
+          "Wine_ID": "13",
+          "Name": "Chenin Blanc",
+          "Winery": "Winery M",
+          "Description": "A versatile white wine with notes of honey and stone fruit.",
+          "Year": 2020,
+          "Region": "Loire Valley",
+          "Price": 17.99,
+          "Image": "https://images.pexels.com/photos/16854496/pexels-photo-16854496/free-photo-of-woman-holding-glass-of-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Dry",
+          "Category": "White",
+          "Pairing": "Roast chicken"
+        },
+        {
+          "Wine_ID": "14",
+          "Name": "Barolo",
+          "Winery": "Winery N",
+          "Description": "A prestigious red wine with complex flavors and firm tannins.",
+          "Year": 2014,
+          "Region": "Piedmont",
+          "Price": 59.99,
+          "Image": "https://images.pexels.com/photos/15846879/pexels-photo-15846879/free-photo-of-grapes-and-a-glass-of-red-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 9,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Truffle dishes"
+        },
+        {
+          "Wine_ID": "15",
+          "Name": "Grenache",
+          "Winery": "Winery O",
+          "Description": "A medium-bodied red wine with red berry and spice notes.",
+          "Year": 2017,
+          "Region": "Rhone Valley",
+          "Price": 22.99,
+          "Image": "https://images.pexels.com/photos/15786533/pexels-photo-15786533/free-photo-of-wine-cellar-filled-with-bottles-of-red-wine.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "Quality": 7,
+          "Subtype": "Dry",
+          "Category": "Red",
+          "Pairing": "Mediterranean cuisine"
+        }
+        // Add more objects as needed
+      ];
+
 
       // var tableValuesSecond;
       // Function to create and populate the table
@@ -1024,7 +1048,7 @@ startAllLoading();
           var updateButton = document.createElement("button");
           updateButton.setAttribute('name', wine.Wine_ID);
           //console.log("updateButton.name",updateButton.name)
-          updateButton.className = "btn btn-primary";
+          updateButton.className = "btn btn-dark ";
           updateButton.textContent = "Update Wine";
           actionsCell.appendChild(updateButton);
 
@@ -1092,8 +1116,8 @@ startAllLoading();
     <td style="width: 100px;">${wine.Category}</td>
     <td style="width: 200px;">${wine.Pairing}</td>
     <td>
-      <button class="btn btn-primary btn-Update" name="${wine.Wine_ID}" onclick="updateWine(this)">Update Wine</button>
-      <button class="btn btn-danger btn-Delete" name="${wine.Wine_ID}" onclick="deleteWine(this)">Delete Wine</button>
+      <button class="btn btn-dark btn-Update" name="${wine.Wine_ID}" onclick="updateWine(this)">Update Wine</button>
+      <button class="btn btn-dark btn-Delete" name="${wine.Wine_ID}" onclick="deleteWine(this)">Delete Wine</button>
     </td>
   `;
           tableBody.appendChild(row);
@@ -1189,4 +1213,5 @@ startAllLoading();
 <!-- adding link to backend/ajax file-->
 <!-- <script type="text/javascript" src="backend/scripts/ajax.js"></script>
  -->
+
 </html>
