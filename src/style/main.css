@@ -1,7 +1,7 @@
 /*BODY*/
 
 body {
-    font-family: 'GeoSansLight', 'Times New Roman', Times, serif;
+    font-family: 'GeoSansLight', 'Ariel', Times, serif !important;
     margin: 0;
     padding: 0;
 }
@@ -38,11 +38,11 @@ body {
 
 }
 
-h1 {
+/* h1 {
     text-align: center;
     font-family: 'GeoSansLight', 'Times New Roman', Times, serif
 }
-
+ */
 
 
 #position {
@@ -152,7 +152,7 @@ p {
 
 /*Search bar information*/
 
-.topnav a {
+/* .topnav a {
     float: left;
     display: block;
     color: black;
@@ -176,7 +176,62 @@ p {
     font-size: 17px;
 }
 
+ */
 
-h2 {
-    color: bisque
+
+
+/*OWNERS.HTML*/
+
+.table-responsive-custom {
+      table-layout: auto;
+    table-layout: auto;
+  }
+
+/*   .table {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+ */
+  .custom-table {
+    background-color: #222222;
+    color: white;
+  }
+
+  .custom-table th {
+    background-color: #222222;
+    color: white;
+  }
+
+  .custom-table td {
+    background-color: white;
+    color: #222222;
+  } */
+
+  .wineries-heading {
+    margin: 25px;
+  }
+
+/*   .btn {
+    background-color: #222222;
+    color: white;
+    border-color: #722F37;
+  }
+
+  .btn:hover {
+    background-color: #722F37;
+    color: white;
+    border-color: #722F37;
+  }
+
+  .btn:active {
+    background-color: #722F37;
+    color: white;
+    border-color: #722F37;
+  } */
+
+
+
+/*WINERTIES.HTML*/
+#mainWineriesContent{
+    color:black;
 }
