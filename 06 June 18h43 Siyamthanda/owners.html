@@ -644,13 +644,14 @@
   //........................................................................................................
 
   window.onload = function () {//start of onload function *********************************************************************
-
+console.log(allWinesDummyData);
     tableName = "Wine";
     var tableValuesSecond;
     var countTableVals = 0;
     // const allWines = tableValuesSecond;
     var allWines;
 
+   /* getAllTable is a function from the ajax.js that obtains the entire wines table
     getAllTable(tableName)
       .then(AllTableValues => {
         if (AllTableValues && AllTableValues.length > 0 && 'Wine_ID' in AllTableValues[0]) {
@@ -674,10 +675,14 @@
       .catch(error => {
         console.error(error);
       });
+*/
 
+startAllLoading();
     //and assign tableValuesSecond to allWines
+    allWines = allWinesDummyData;
+    tableValuesSecond = allWinesDummyData;
 
-
+    console.log(allWines);
     //........................................................................................................
     //               end of calling function to assign all wines to results of wines table                                           
     //........................................................................................................
@@ -801,10 +806,11 @@
               "Category": "White Wine"
             }
             // Add more objects as needed
-          ];
-       */
+          ]; */
+       
 
-      // var tableValuesSecond;
+      //var tableValuesSecond = allWines;
+      tableValuesSecond = allWines;
       // Function to create and populate the table
       function createTable() {
         var tableBody = document.getElementById("tableBody");
@@ -990,10 +996,7 @@
 
 
 </script>
-
-<!--end of second table using bootstrap-->
 <!-- adding link to backend/ajax file-->
-<script type="text/javascript" src="backend/scripts/ajax.js"></script>
-<!-- adding link to backend/ajax file-->
-
+<!-- <script type="text/javascript" src="backend/scripts/ajax.js"></script>
+ -->
 </html>
