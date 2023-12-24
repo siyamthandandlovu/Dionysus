@@ -680,7 +680,6 @@ console.log(allWinesDummyData);
 startAllLoading();
     //and assign tableValuesSecond to allWines
     allWines = allWinesDummyData;
-    tableValuesSecond = allWinesDummyData;
 
     console.log(allWines);
     //........................................................................................................
@@ -786,31 +785,40 @@ startAllLoading();
 
       // Sample JSON data
       //..........................................................................................
-      /*     var tableValuesSecond = [
+            tableValuesSecond = [
             {
-              "Name": "Wine 1",
-              "Description": "Description 1",
-              "Year": "2022",
-              "Region": "South Africa",
-              "Price": 10.99,
-              "Quality": 7,
-              "Category": "Red Wine"
-            },
-            {
-              "Name": "Wine 2",
-              "Description": "Description 2",
-              "Year": "2021",
-              "Region": "Italy",
-              "Price": 15.99,
-              "Quality": 8,
-              "Category": "White Wine"
-            }
+    "Wine_ID": "1",
+    "Name": "Chardonnay",
+    "Winery": "Winery A",
+    "Description": "A classic white wine with rich flavors.",
+    "Year": 2019,
+    "Region": "California",
+    "Price": 25.99,
+    "Image": "https://images.pexels.com/photos/774455/pexels-photo-774455.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "Quality": 9,
+    "Subtype": "Dry",
+    "Category": "White",
+    "Pairing": "Seafood"
+  },
+  {
+    "Wine_ID": "2",
+    "Name": "Cabernet Sauvignon",
+    "Winery": "Winery B",
+    "Description": "A bold red wine with intense flavors.",
+    "Year": 2016,
+    "Region": "Napa Valley",
+    "Price": 39.99,
+    "Image": "https://images.pexels.com/photos/15780335/pexels-photo-15780335/free-photo-of-wine-in-glass-in-woman-hand.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "Quality": 8,
+    "Subtype": "Dry",
+    "Category": "Red",
+    "Pairing": "Steak"
+  }
             // Add more objects as needed
-          ]; */
+          ];
        
 
-      //var tableValuesSecond = allWines;
-      tableValuesSecond = allWines;
+      // var tableValuesSecond;
       // Function to create and populate the table
       function createTable() {
         var tableBody = document.getElementById("tableBody");
