@@ -299,7 +299,8 @@
             selectWineryValues.push(winery)
             var wineryInfo = document.createElement("p");
             wineryInfo.textContent = "Winery ID: " + winery.Winery_ID + ", Name: " + winery.Name + ", Address: " + winery.Address + ", City: " + winery.City + ", Province: " + winery.Province;
-            wineryList.appendChild(wineryInfo);
+            //wineryList.appendChild(wineryInfo);
+            console.log(wineryInfo);
           }
         }
 
@@ -318,7 +319,7 @@
           wineryDiv.appendChild(nameElement);
 
           var imageElement = document.createElement('img');
-          imageElement.className = 'winery-image img-fluid col-lg-12';
+          imageElement.className = 'winery-image img-fluid col-md-12';
           imageElement.src = winery.Image;
           wineryDiv.appendChild(imageElement);
 
