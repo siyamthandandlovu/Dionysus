@@ -235,7 +235,7 @@
 
       allWineries.forEach(function (winery) {
         var wineryDiv = document.createElement('div');
-        wineryDiv.className = 'winery mb-5';
+        wineryDiv.className = 'winery container';
 
         var nameElement = document.createElement('h3');
         nameElement.className = 'winery-name text-dark';
@@ -243,7 +243,7 @@
         wineryDiv.appendChild(nameElement);
 
         var imageElement = document.createElement('img');
-        imageElement.className = 'winery-image  img-fluid col-lg-12';
+        imageElement.className = 'winery-image img-fluid col-lg-12';
         imageElement.src = winery.Image;
         wineryDiv.appendChild(imageElement);
 
@@ -312,13 +312,13 @@
           var wineryDiv = document.createElement('div');
           wineryDiv.className = 'winery';
 
-          var nameElement = document.createElement('p');
-          nameElement.className = 'winery-name';
+          var nameElement = document.createElement('h3');
+          nameElement.className = 'winery-name text-dark';
           nameElement.textContent = winery.Name;
           wineryDiv.appendChild(nameElement);
 
           var imageElement = document.createElement('img');
-          imageElement.className = 'winery-image';
+          imageElement.className = 'winery-image img-fluid col-lg-12';
           imageElement.src = winery.Image;
           wineryDiv.appendChild(imageElement);
 
