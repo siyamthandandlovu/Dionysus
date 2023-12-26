@@ -187,11 +187,11 @@ p {
     table-layout: auto;
   }
 
-/*   .table {
+  .table {
     max-width: 100%;
     overflow-x: auto;
   }
- */
+ 
   .custom-table {
     background-color: #222222;
     color: white;
@@ -210,7 +210,22 @@ p {
   .wineries-heading {
     margin: 25px;
   }
+ /*Wineries Colours*/
+/*      .custom-table {
+      background-color: #222222;
+      color: white;
+    }
 
+    .custom-table th {
+      background-color: #222222;
+      color: white;
+    }
+
+    .custom-table td {
+      background-color: white;
+      color: #222222;
+    } 
+ */
 /*   .btn {
     background-color: #222222;
     color: white;
