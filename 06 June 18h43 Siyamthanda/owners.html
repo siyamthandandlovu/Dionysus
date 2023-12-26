@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dionysus Wine Catalogue Management</title>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
@@ -55,22 +58,21 @@
   </nav>
 
 
+  <div class="container div-title">
+    <div class="col-md-12">
+      <div class="wineries-heading">
+        <h1 class="titleText text-center">Wine Catalogue Management</h1>
+      </div> <!--sir WHY does the whole title just DISSAPEAR when i make h1 a p instead????????? -->
 
-  <div class="wineries-heading">
-    <h1 class="titleText text-center">Wine Catalogue Management</h1>
-  </div> <!--sir WHY does the whole title just DISSAPEAR when i make h1 a p instead????????? -->
-  <!--   <button id="addWine">Add Wine</button>
+      <div class="text-center">
+        <p class=" text-dark px-4">You can effortlessly manage every aspect of your wine inventory, ensuring that
+          your collection is always up-to-date, well-organized, and easily accessible.</p>
+        <!--Two buttons to select the whether to -->
 
-  <button id="delteUpdateWine">Update or Delete Wines</button> -->
-
-  <p class="text-center text-dark px-4">You can effortlessly manage every aspect of your wine inventory, ensuring that
-    your collection is always up-to-date, well-organized, and easily accessible.</p>
-  <!--Two buttons to select the whether to -->
-
-  <div class="">
-    <button class="btn btn-dark" data-toggle="modal" data-target="#addWineModal">Add a Wine</button>
-  </div>
-
+        <button class="btn btn-dark" data-toggle="modal" data-target="#addWineModal">Add a Wine</button>
+      </div>
+    </div>
+  </div><!--div-title-->
 
   <div id="searchWineDiv" class="mainDiv centered-div">
     <!-- the div for the search button - owner searches by wine name-->
@@ -239,7 +241,7 @@
 
     <!-- TABLE STYLED USING BOOTSTRAP-->
 
-    <div class="container">
+    <div class="container px-4">
       <table class="table table-responsive table-responsive-custom">
         <thead>
           <tr><!-- 
