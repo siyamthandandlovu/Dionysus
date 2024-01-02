@@ -180,7 +180,8 @@
                     <label for="review">Review</label>
                     <textarea class="form-control" id="reviewTextArea" rows="3" required></textarea>
                   </div>
-                  <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close" id="btnSubmitReview">Submit</button>
+                  <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close"
+                    id="btnSubmitReview">Submit</button>
                 </form>
               </div>
             </div>
@@ -961,7 +962,7 @@
         reviewButton.setAttribute('data-bs-target', '#reviewModal');
         reviewButton.setAttribute('name', wine.Wine_ID);
         console.log("reviewButton Button Name : ", reviewButton.name);
-        
+
         reviewButton.innerText = 'Review';
 
         wineDiv.appendChild(reviewButton);
@@ -977,7 +978,7 @@
         showAllReviewsButton.setAttribute('data-bs-target', '#allReviewsModalFinal');
         showAllReviewsButton.setAttribute('name', wine.Wine_ID);
         console.log("showAllReviews Button Name : ", showAllReviewsButton.name);
-        
+
         showAllReviewsButton.innerText = 'All Reviews';
 
         wineDiv.appendChild(showAllReviewsButton);
