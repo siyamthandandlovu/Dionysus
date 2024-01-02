@@ -149,7 +149,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="reviewModalLabel">Leave a Review</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <!--  <span aria-hidden="true">&times;</span> -->
                   <span aria-hidden="true">x</span>
                 </button>
@@ -180,7 +180,7 @@
                     <label for="review">Review</label>
                     <textarea class="form-control" id="reviewTextArea" rows="3" required></textarea>
                   </div>
-                  <button type="submit" class="btn btn-dark" id="btnSubmitReview">Submit</button>
+                  <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close" id="btnSubmitReview">Submit</button>
                 </form>
               </div>
             </div>
@@ -204,7 +204,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="allReviewsModalFinalLabel">All Reviews for Wine</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">x</span>
                 </button>
               </div>
@@ -212,7 +212,7 @@
                 <!-- Review content will be dynamically inserted here -->
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -675,15 +675,6 @@
         "Pairing": "Pasta dishes"
       }
 
-      /* 
-            Mont Rochelle Hotel & Vineyard
-      Bezalel Wine & Brandy Estate
-      Die Mas van Kakamas
-      Orange River Cellars
-      The Tasting Room
-      The Vaal River Meander
-      Abingdon Wine Estate */
-
     ];//end of wineries array
 
     const allWines = allWinesDummyData;
@@ -909,7 +900,6 @@
 
 
 
-
     function loadWinesSpecific(jsonArrayWines) {
 
       // const container = document.querySelector('.wineDiv');
@@ -967,12 +957,11 @@
         const reviewButton = document.createElement('button');
         reviewButton.classList.add('btn', 'btn-dark', 'review-button', 'me-2', 'mt-2');
         reviewButton.setAttribute('type', 'button');
-        reviewButton.setAttribute('data-toggle', 'modal');
-        reviewButton.setAttribute('data-target', '#reviewModal');
+        reviewButton.setAttribute('data-bs-toggle', 'modal');
+        reviewButton.setAttribute('data-bs-target', '#reviewModal');
         reviewButton.setAttribute('name', wine.Wine_ID);
         console.log("reviewButton Button Name : ", reviewButton.name);
-        //type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
-        // type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
+        
         reviewButton.innerText = 'Review';
 
         wineDiv.appendChild(reviewButton);
@@ -984,116 +973,14 @@
         // showAllReviewsButton.classList.add('btn', 'btn-dark', 'review-button');
         showAllReviewsButton.classList.add('btn', 'btn-dark', 'all-review-button', 'me-2', 'mt-2');
         showAllReviewsButton.setAttribute('type', 'button');
-        showAllReviewsButton.setAttribute('data-toggle', 'modal');
-        showAllReviewsButton.setAttribute('data-target', '#allReviewsModalFinal');
+        showAllReviewsButton.setAttribute('data-bs-toggle', 'modal');
+        showAllReviewsButton.setAttribute('data-bs-target', '#allReviewsModalFinal');
         showAllReviewsButton.setAttribute('name', wine.Wine_ID);
         console.log("showAllReviews Button Name : ", showAllReviewsButton.name);
-        // showAllReviewsButton.setAttribute('name', wine.Wine_ID);
-        //type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
-        // type="button" class="btn btn-dark" data-toggle="modal" data-target="#reviewModal"
+        
         showAllReviewsButton.innerText = 'All Reviews';
 
         wineDiv.appendChild(showAllReviewsButton);
-
-
-        //................................................................................................
-        // CODE TO ADD MODAL DYNAMICALLY AND DISPLAY ALL REVIEWS WHEN THE ALL REVIEWS BUTTON IS CLICKED
-        //................................................................................................
-        /* 
-        
-        // Create the dynamically generated button
-        const button = document.createElement('button');
-        button.textContent = 'Open Reviews';
-        button.setAttribute('data-toggle', 'modal');
-        button.setAttribute('data-target', '#allReviewsModal');
-        //button.setAttribute('name', Review_ID);
-        button.setAttribute('name', wine.Wine_ID);
-        
-        // Add event listener to the button
-        button.addEventListener('click', function() {
-          const reviewID = this.getAttribute('name'); // Get the Review_ID from the clicked button
-        
-          // Retrieve all reviews from the allReviews object
-          //const reviews = allReviews.filter(review => review.Review_ID === reviewID);//well reviewID is actually the wineID
-          const reviews = allReviews.filter(review => review.Wine == reviewID);//well reviewID is actually the wineID
-          console.log("All Reviews for wine with ID" , reviewID, reviews);
-          // Clear previous reviews in the modal body
-          const modalBody = document.querySelector('.modal-body');
-          modalBody.innerHTML = '';
-        
-          // Iterate over the reviews and create text elements
-          reviews.forEach(review => {
-            //const reviewText = document.createElement('p');
-            const reviewText = document.createElement('b');
-            reviewText.textContent = `${review.Date} - ${review.Email}`;
-            
-            const ratingText = document.createElement('span');
-            ratingText.textContent = ` ${review.Rating}/5`;
-        
-            const descriptionText = document.createElement('p');
-            descriptionText.textContent = review.Description;
-        
-            const breakTag =  document.createElement('br');
-            reviewText.appendChild(breakTag);
-        
-            
-            reviewText.appendChild(ratingText);
-            modalBody.appendChild(reviewText);
-            modalBody.appendChild(descriptionText);
-          });
-        });//end of even listener
-        
-        // Append the button to the document
-        const buttonContainer = document.querySelector('#wineDiv');
-        buttonContainer.appendChild(button);
-        
-        
-        
-        
-        // Define the modal
-        const modal = document.createElement('div');
-        modal.classList.add('modal');
-        modal.setAttribute('id', 'allReviewsModal');
-        
-        const modalDialog = document.createElement('div');
-        modalDialog.classList.add('modal-dialog');
-        
-        const modalContent = document.createElement('div');
-        modalContent.classList.add('modal-content');
-        
-        const modalHeader = document.createElement('div');
-        modalHeader.classList.add('modal-header');
-        modalHeader.innerHTML = `
-          <h5 class="modal-title">All Reviews</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">x</span>
-          </button>
-        `;
-        const modalBody = document.createElement('div');
-        modalBody.classList.add('modal-body');
-        
-        const modalFooter = document.createElement('div');
-        modalFooter.classList.add('modal-footer');
-        modalFooter.innerHTML = `
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        `;
-        
-        modalContent.appendChild(modalHeader);
-        modalContent.appendChild(modalBody);
-        modalContent.appendChild(modalFooter);
-        modalDialog.appendChild(modalContent);
-        modal.appendChild(modalDialog);
-        
-        // Append the modal to the document
-        const modalContainer = document.querySelector('#wineDiv');
-        modalContainer.appendChild(modal);
-        
-        
-        
-         */
-        //................................................................................................
-        // CODE TO ADD MODAL DYNAMICALLY AND DISPLAY ALL REVIEWS WHEN THE ALL REVIEWS BUTTON IS CLICKED
-        //................................................................................................
 
 
         //finally addd the whole div
@@ -1103,22 +990,8 @@
 
     }//end of loadwinesspecific function
 
-    loadWinesSpecific(allWines)
-      ;
+    loadWinesSpecific(allWines);
 
-
-    //then add event listeners to add wines to 
-
-
-
-    /* 
-    nameRadio
-    wineryRadio
-    yearRadio
-    priceRadio
-    qualityRadio
-    
-     */
 
 
     //................................................................................................
@@ -1216,29 +1089,6 @@
     //...............................................................
     //END OF SEARCHING FUNCTIONALITY
     //...............................................................
-
-
-
-
-    //........................................................................................................
-    //                                       REVIEW MODAL                                        
-    //........................................................................................................
-    //this code ensures that the dynamically created buttons still popup the modal
-    //do NOT remove
-
-    // Event delegation to handle click event on dynamically created button
-    //  reviewButton.classList.add('btn', 'btn-dark', 'review-button');
-    /*  document.addEventListener("click", function(event) {
-        if (event.target.matches("#wineDiv button")) {//finds buttons in a div with ID wineDiv
-          // Handle button click event here
-          $('#reviewModal').modal('show');
-        }
-      });  */
-
-    //........................................................................................................
-    //                                     END OF REVIEW MODAL CODE                                       
-    //........................................................................................................
-
 
 
     //........................................................................................................
@@ -1378,12 +1228,6 @@
     //........................................................................................................
     //               end of event listener for submit button in review modal
     //........................................................................................................
-
-
-
-
-
-
 
   </script>
   </div><!--end of the main body div-->
