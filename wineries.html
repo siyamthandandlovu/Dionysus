@@ -73,10 +73,10 @@
         <h2 class="text-dark">Province</h2>
         <select id="dropDownProvince" title="Select Province">
           <option value="">Select Province</option>
-<!--           <option value="Eastern Cape">Eastern Cape</option>
+          <!--           <option value="Eastern Cape">Eastern Cape</option>
  --><!--           <option value="Free State">Free State</option> -->
           <option value="Gauteng">Gauteng</option>
-<!--           <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+          <!--           <option value="KwaZulu-Natal">KwaZulu-Natal</option>
  --><!--           <option value="Limpopo">Limpopo</option>
           <option value="Mpumalanga">Mpumalanga</option>
           <option value="North West">North West</option> -->
@@ -259,7 +259,7 @@
         nameElement.className = 'winery-name text-dark';
         nameElement.textContent = winery.Name;
         wineryDiv.appendChild(nameElement);
-        
+
         var imageElement = document.createElement('img');
         imageElement.className = 'winery-image img-fluid mb-3 col-lg-12';
         imageElement.src = winery.Image;
@@ -287,8 +287,8 @@
 
         var linkElement = document.createElement('a');
         linkElement.className = 'link-dark py-2';
-        linkElement.href=winery.Website;
-        linkElement.textContent = 'Visit the '+ winery.Name + ' website';
+        linkElement.href = winery.Website;
+        linkElement.textContent = 'Visit the ' + winery.Name + ' website';
         wineryDiv.appendChild(linkElement);
 
         container.appendChild(wineryDiv);
@@ -339,6 +339,7 @@
 
 
         selectWineryValues.forEach(function (winery) {
+
           var wineryDiv = document.createElement('div');
           wineryDiv.className = 'winery container pb-5';
 
@@ -351,6 +352,13 @@
           imageElement.className = 'winery-image img-fluid col-md-12';
           imageElement.src = winery.Image;
           wineryDiv.appendChild(imageElement);
+
+
+          var descriptElement = document.createElement('h5');
+          descriptElement.className = 'text-dark pb-2';
+          descriptElement.textContent = '' + winery.Description;
+          wineryDiv.appendChild(descriptElement);
+
 
           var addressElement = document.createElement('p');
           addressElement.className = 'text-dark';
@@ -366,6 +374,12 @@
           provinceElement.className = 'text-dark';
           provinceElement.textContent = 'Province: ' + winery.Province;
           wineryDiv.appendChild(provinceElement);
+
+          var linkElement = document.createElement('a');
+          linkElement.className = 'link-dark py-2';
+          linkElement.href = winery.Website;
+          linkElement.textContent = 'Visit the ' + winery.Name + ' website';
+          wineryDiv.appendChild(linkElement);
 
           container.appendChild(wineryDiv);
         });
