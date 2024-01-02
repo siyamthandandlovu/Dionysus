@@ -32,7 +32,7 @@
 
   <nav class="navbar navbar-expand-sm bg-body-tertiary px-0 py-0 " data-bs-theme="dark">
     <div class="container-fluid py-2" style="background-color: #722F37;">
-      <a class="navbar-brand" href="#">Dionysus</a>
+      <a class="navbar-brand" href="home.html">Dionysus</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -112,7 +112,7 @@
     <a href="#" class="bi bi-pinterest"></a>
     <br>
     <p class="text-light text-md-center pt-2">Dionysus @2023</p>
-    <a href="#" class="text-light text-md-center">About</a>
+    <a href="about.html" class="text-light text-md-center">About</a>
   </div>
 
   <!--end of divBottom-->
@@ -125,62 +125,62 @@
     const allWineryDataDummyValues = [
       {
         "Winery_ID": "1",
-        "Name": "Jim Harris Wines",
-        "Address": "Address 1",
-        "City": "City 1",
-        "Province": "Eastern Cape",
-        "Verification": true,
-        "Description": "Description 1",
-        "Image": "https://images.unsplash.com/photo-1682687221213-56e250b36fdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        "Name": "Athonij Rupert Wyne",
+        "Address": "R45 Wine Route, Franschhoek Valley Groot Drakenstein 7690",
+        "City": "Franschhoek",
+        "Province": "Western Cape",
+        "Website": "https://www.shop.rupertwines.com/",
+        "Description": "Anthonij Rupert Wyne was founded on the farm L'Ormarins in Franschhoek and was originally owned by the late Anthonij Rupert. In 2003, his brother Johann Rupert took over the wine farm and the brand named after him.",
+        "Image": "https://www.shop.rupertwines.com/images/thumbs/0000449_HOME%20HEADER%20-%20TERRA%20DEL%20CAPO.jpeg"
       },
       {
         "Winery_ID": "2",
-        "Name": "Stellenbosch Vineyards",
-        "Address": "Address 2",
-        "City": "City 2",
-        "Province": "Gauteng",
-        "Verification": false,
-        "Description": "Description 2",
-        "Image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        "Name": "Waterford Estate",
+        "Address": "Upper Blaauwklippen Rd Stellenbosch, Western Cape 7550, South Africa",
+        "City": "Stallenbosch",
+        "Province": "Western Cape",
+        "Website": "https://www.waterfordestate.co.za/",
+        "Description": "Located in the scenic Blaauwklippen Valley in Stellenbosch, South Africa’s most famous wine-producing region, Waterford Estate is renowned for its spectacular views and exceptional wine-tasting experiences.",
+        "Image": "https://luxurygoldblog.wpenginepowered.com/wp-content/uploads/2023/05/waterford-estate-1024x686.jpg"
       },
       {
         "Winery_ID": "3",
-        "Name": "Winery 3",
-        "Address": "Address 3",
-        "City": "City 3",
+        "Name": "Marianne Wine Estate",
+        "Address": "Valley Road, off the R44 Stellenbosch, Western Cape 7550, South Africa",
+        "City": "Stalenbosch",
         "Province": "Western Cape",
-        "Verification": true,
-        "Description": "Description 3",
-        "Image": "https://images.unsplash.com/photo-1464638681273-0962e9b53566?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        "Website": "http://www.mariannewines.com/",
+        "Description": "Marianne Wines is a boutique winery in the Stellenbosch and Paarl area, influenced by French heritage and international savoir-faire.",
+        "Image": "https://www.winepaths.com/var/site/storage/images/_aliases/banner-image/0/1/5/1/21510-1-eng-GB/589246e613f83_904804_576121229087981_2112126554_o.jpg"
       },
       {
         "Winery_ID": "4",
-        "Name": "Winery 4",
-        "Address": "Address 4",
-        "City": "City 4",
-        "Province": "KwaZulu-Natal",
-        "Verification": true,
-        "Description": "Description 4",
-        "Image": "https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        "Name": "Rupert & Rothschild Vignerons",
+        "Address": "Klapmuts-Simondium Road, Simondium 7670, Cape Town, South Africa",
+        "City": "Cape Town",
+        "Province": "Western Cape",
+        "Website": "https://rupert-rothschildvignerons.com/",
+        "Description": "At the foot of the spectacular Simonsberg mountain in the Franschhoek valley lies the historic French Huguenot farm Fredericksburg, established in 1690 and now home to Rupert & Rothschild Vignerons.",
+        "Image": "https://www.winepaths.com/var/site/storage/images/_aliases/front-gallery/0/8/8/5/75880-1-eng-GB/597b1f2d5fdb7_TX9A3679.jpg"
       },
       {
         "Winery_ID": "5",
-        "Name": "Winery 5",
-        "Address": "Address 5",
-        "City": "City 5",
-        "Province": "Northern Cape",
-        "Verification": false,
-        "Description": "Description 5",
-        "Image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+        "Name": "Klein Constantia Estate",
+        "Address": "37 Klein Constantia Road Constantia 7708",
+        "City": "Cape Town",
+        "Province": "Western Cape",
+        "Website": "https://www.kleinconstantia.com/",
+        "Description": "Described as one of the world's most beautiful vineyards, Klein Constantia is set amidst ancient trees and lush greenery on the upper foothills of the Constantiaberg, with superb views across the Constantia Valley and False Bay.",
+        "Image": "https://www.kleinconstantia.com/wp-content/gallery/gallery/Klein-Constantia_0010.jpg"
       },
       {
         "Winery_ID": "6",
-        "Name": "Winery 6",
+        "Name": "Mont Rochelle Hotel & Vineyard",
         "Address": "Address 6",
         "City": "City 6",
         "Province": "Mpumalanga",
-        "Verification": true,
-        "Description": "Description 6",
+        "Website": true,
+        "Description": "Mont Rochelle, a stunning 26-bedroom hotel and vineyard in Franschooek, just under one hour’s drive from Cape Town. This traditional vineyard town is famously known as the French Corner and is considered to be the food and wine capital of South Africa.",
         "Image": "https://images.unsplash.com/photo-1602170284347-f9c28856f149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80"
       },
       {
@@ -189,7 +189,7 @@
         "Address": "Address 7",
         "City": "City 7",
         "Province": "Limpopo",
-        "Verification": false,
+        "Website": false,
         "Description": "Description 7",
         "Image": "https://images.unsplash.com/photo-1515779122185-2390ccdf060b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
       },
@@ -199,7 +199,7 @@
         "Address": "Address 8",
         "City": "City 8",
         "Province": "North West",
-        "Verification": true,
+        "Website": true,
         "Description": "Description 8",
         "Image": "https://images.unsplash.com/photo-1542159919831-40fb0656b45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
       },
@@ -209,7 +209,7 @@
         "Address": "Address 9",
         "City": "City 9",
         "Province": "Free State",
-        "Verification": true,
+        "Website": true,
         "Description": "Description 9",
         "Image": "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
       },
@@ -219,11 +219,11 @@
         "Address": "Address 10",
         "City": "City 10",
         "Province": "Eastern Cape",
-        "Verification": false,
+        "Website": false,
         "Description": "Description 10",
         "Image": "https://images.unsplash.com/photo-1682687220566-5599dbbebf11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8NDJ8fHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
       }
-      // Add more wineries here...
+
     ]//end of allWineriesDummyValues variable
     var allWineries = allWineryDataDummyValues;
 
