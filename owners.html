@@ -660,8 +660,8 @@
   //........................................................................................................
 
   window.onload = function () {//start of onload function *********************************************************************
-    console.log(allWinesDummyData);
-    tableName = "Wine";
+/*     console.log(allWinesDummyData);
+ */    tableName = "Wine";
     var tableValuesSecond;
     var countTableVals = 0;
     // const allWines = tableValuesSecond;
@@ -697,8 +697,8 @@
     //and assign tableValuesSecond to allWines
     allWines = allWinesDummyData;
 
-    console.log(allWines);
-    //........................................................................................................
+/*     console.log(allWines);
+ */    //........................................................................................................
     //               end of calling function to assign all wines to results of wines table                                           
     //........................................................................................................
 
@@ -1176,8 +1176,8 @@
 
         // tableValuesSecond.forEach(function (wine) {
         allWines.forEach(function (wine) {
-          console.log("wine", wine)
-
+/*           console.log("wine", wine);
+ */
           var row = document.createElement("tr");
           Object.values(wine).forEach(function (value) {
             var cell = document.createElement("td");
@@ -1185,14 +1185,14 @@
             row.appendChild(cell);
 
           });
-          console.log("row for wine of ID", wine.Wine_ID, row)
-
+/*           console.log("row for wine of ID", wine.Wine_ID, row);
+ */
           // Create action buttons
           var actionsCell = document.createElement("td");
 
           var updateButton = document.createElement("button");
           updateButton.setAttribute('name', wine.Wine_ID);
-          //console.log("updateButton.name",updateButton.name)
+          //console.log("updateButton.name",updateButton.name);
           updateButton.className = "btn btn-dark ";
           updateButton.textContent = "Update Wine";
           actionsCell.appendChild(updateButton);
@@ -1272,8 +1272,8 @@
         // Append the table to a container element in the HTML
         const container = document.getElementById('tableBody');
         container.appendChild(table);
-        console.log("the entire table", table);
-      }//end of tableForAllWines function
+/*         console.log("the entire table", table);
+ */      }//end of tableForAllWines function
 
       tableForAllWines();
 
@@ -1316,8 +1316,8 @@
       deletebuttons.forEach((button) => {
 
         button.addEventListener("click", function () {
-          console.log("Delete button was clicked with ID : ", button.name)
-          //clear the contents of the modal so it looks as though nothing was selected
+/*           console.log("Delete button was clicked with ID : ", button.name);
+ */          //clear the contents of the modal so it looks as though nothing was selected
           document.getElementById("reviewEmail").value = "";
           document.getElementById("reviewTextArea").value = "";
           document.getElementById("ratingReview").value = "";
